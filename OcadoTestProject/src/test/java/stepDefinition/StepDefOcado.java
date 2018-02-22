@@ -97,8 +97,15 @@ public class StepDefOcado extends WebConnector{
 
 	// Verify Primary NavBar
 	@When("^I click on \"([^\"]*)\" button in Primary Navbar$")
-	public void i_click_on_button_in_Primary_Navbar(String arg1) throws Exception {
-		driver.findElement(By.cssSelector(arg1)).click();
+	public void i_click_on_button_in_Primary_Navbar(String PrimaryNavBar) throws Exception {
+		String value = PrimaryNavBar;
+		if(PrimaryNavBar.startsWith("-")) {
+			value = properties.getProperty(PrimaryNavBar);
+			if(null == value) {
+				value = PrimaryNavBar;
+			}
+		}
+		driver.findElement(By.cssSelector(value)).click();
 	}
 
 	@When("^I click on \"([^\"]*)\" button in side NavBar$")

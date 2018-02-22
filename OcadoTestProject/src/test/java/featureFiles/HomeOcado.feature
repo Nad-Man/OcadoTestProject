@@ -5,7 +5,7 @@ Feature:
  	Background:
  		Given I am on Ocado home page
  		
- 	Scenario: Veryfy hopme page title
+ 	Scenario: Veryfy home page title
  		#Given I am on Ocado home page
  		Then I should see "Ocado: The online supermarket"
  		
@@ -57,6 +57,7 @@ Feature:
 		    | -BigNightIn 		| Big Night In from Ocado: Shop													|
 		    | -Easter			| Easter from Ocado: Shop														|
 	
+	@Home
 	Scenario Outline: Verify all buttons in Primary NavBar
 		When I click on "<primaryButtons>" button in Primary Navbar
 	 	Then I should see "<searchResult>" page
