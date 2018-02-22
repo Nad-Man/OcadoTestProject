@@ -34,7 +34,7 @@ Feature:
  		Examples:
 	 		| headerButtons		| searchResult 	                 										|
 	 		| -Recipes			| Recipes from Ocado               										|
-	 		| -Easter			| Easter from Ocado: Shop		 										|
+	 		| -RoundPoundDeals	| Round Pound Deals from Ocado: Shop		 										|
 	 		| -InviteAFriend	| Ocado: The online supermarket	 										|
 	 		| -SmartPass		| Ocado: Ocado Smart Pass											    |
 	 		| -Fetch			| Fetch, the pet store from Ocado \| Quality pet food and medicines		|	
@@ -62,15 +62,15 @@ Feature:
 	 	Then I should see "<searchResult>" page
 	 	Examples:
 			| primaryButtons				  		| searchResult 	                 		|
-	 		| div.browseShop				  		| Ocado, the Online Supermarket         |
-	 		| li#favourites					 		| Ocado: The online supermarket 		|
-	 		| ol.nav-common li:nth-child(3) 		| Ocado, the online supermarket	 		|
-	 		| ol#navigation li:nth-child(4)	  		| Ocado: Offers							|
-	 		| ol#navigation li:nth-child(5)	 		| New from Ocado: Shop					|	
-	 		| ol#navigation li:nth-child(6)	  		| Ocado: Ocado Smart Pass				|
-	 		| ol#navigation li:nth-child(7)			| Wine Cellar from Ocado: Shop Ocado	|
-	 		| ol#navigation li:nth-child(8)			| Ocado: The online supermarket    		|
-	 		| ol#navigation li:nth-child(9)		   	| Ocado: Customer Services				|
+	 		| -BrowseShop					  		| Ocado, the Online Supermarket         |
+	 		| -Favorites					 		| Ocado: The online supermarket 		|
+	 		| -ChooseYourRegulars			 		| Ocado, the online supermarket	 		|
+	 		| -Offers						  		| Ocado: Offers							|
+	 		| -New							 		| New from Ocado: Shop					|	
+	 		| -SmartPass	  						| Ocado: Ocado Smart Pass				|
+	 		| -Wine									| Wine Cellar from Ocado: Shop Ocado	|
+	 		| -Seasonal								| Ocado: The online supermarket    		|
+	 		| -ContactUsPrm						   	| Ocado: Customer Services				|
 	 
 	 #@include		
 	 Scenario Outline: Verify all Social media links

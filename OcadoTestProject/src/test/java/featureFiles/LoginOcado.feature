@@ -30,7 +30,7 @@ Feature:
 			| //*[@id='quickReg']| Register in seconds	| //button[@id='acceptForm']	 | Please enter a password.			 	  	|
 			| //*[@id='quickReg']| Register in seconds	| //button[@id='acceptForm']	 | Double check your postcode and try again.|
 						
-	@Login		
+	#@Login		
 	Scenario Outline: Verify Login in Popup third party windows
  		When I click on "<loginOption>" element
  		Then I should see "<searchResult>" popup
