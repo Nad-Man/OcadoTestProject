@@ -5,7 +5,7 @@ Feature:
  	Background:
  		Given I am on Ocado home page
  		
- 	Scenario: Veryfy home page title
+ 	Scenario: Verify home page title
  		#Given I am on Ocado home page
  		Then I should see "Ocado: The online supermarket"
  		
@@ -34,12 +34,12 @@ Feature:
  		Examples:
 	 		| headerButtons		| searchResult 	                 										|
 	 		| -Recipes			| Recipes from Ocado               										|
-	 		| -RoundPoundDeals	| Round Pound Deals from Ocado: Shop		 										|
+	 		| -RoundPoundDeals	| Round Pound Deals from Ocado: Shop									|
 	 		| -InviteAFriend	| Ocado: The online supermarket	 										|
 	 		| -SmartPass		| Ocado: Ocado Smart Pass											    |
 	 		| -Fetch			| Fetch, the pet store from Ocado \| Quality pet food and medicines		|	
 	 		| -Sizzle			| Quality kitchen and dining products from kitchen store Sizzle.co.uk	|
-	 		| -KidsClearance	| Kids Clearance: Clearance: Ocado: Shop								|
+	 		| -Easter			| Easter from Ocado: Shop												|
 	 		| -Reserved 	 	| Login at Ocado, the online supermarket 								|
 	 		| -BookADelivery   	| Ocado: The online supermarket											|
 			| -ViewTrolly		| Ocado: Your trolley													|
@@ -53,8 +53,8 @@ Feature:
 			| sideBar			| searchResult 	        														|
 			| -DonateFood 		| Food Bank Vouchers: Gifts & Vouchers: Newsagent & Entertainment: Ocado: Shop 	|
 		    | -MakeTheChange 	| Ocado, the online supermarket													|
-		    | -AmazingBabySale	| Amazing Baby Sale from Ocado: Shop											|
-		    | -BigNightIn 		| Big Night In from Ocado: Shop													|
+		    | -AmazingBabySale	| Ocado: Catalogue																|
+		    | -BigNightIn 		| Top Rated Baby Products from Ocado: Shop										|
 		    | -Easter			| Easter from Ocado: Shop														|
 	
 	@Home
@@ -68,12 +68,19 @@ Feature:
 	 		| -ChooseYourRegulars			 		| Ocado, the online supermarket	 		|
 	 		| -Offers						  		| Ocado: Offers							|
 	 		| -New							 		| New from Ocado: Shop					|	
-	 		| -SmartPass	  						| Ocado: Ocado Smart Pass				|
+	 		| -SmartPass1	  						| Ocado: Ocado Smart Pass				|
 	 		| -Wine									| Wine Cellar from Ocado: Shop Ocado	|
 	 		| -Seasonal								| Ocado: The online supermarket    		|
 	 		| -ContactUsPrm						   	| Ocado: Customer Services				|
-	 
-	 #@include		
+	 #@Home		
+	 #Scenario Outline: Verify all dropdown buttons in Primary NavBar
+		#When I hover over on "<browseShop>" button in Navbar
+	 	#Then I should see "<searchResult>" page	
+	 	#Examples:
+		#	|browseShop|searchResult|	
+	 	#	|div.browseShop|New from Ocado: Shop|
+	 	
+	 #@Home		
 	 Scenario Outline: Verify all Social media links
 		When I click on "<socialMedia>" icons
 	 	Then I should nevigate to "<searchResultURL>" website

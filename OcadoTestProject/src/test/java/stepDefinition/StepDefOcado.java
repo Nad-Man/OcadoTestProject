@@ -6,6 +6,7 @@ import java.util.Properties;
 
 import org.junit.Assert;
 import org.openqa.selenium.By;
+import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.Select;
 
 import browserController.WebConnector;
@@ -107,6 +108,19 @@ public class StepDefOcado extends WebConnector{
 		}
 		driver.findElement(By.cssSelector(value)).click();
 	}
+	
+/*	// Verify browse shop dropdown
+	@When("^I hover over on \"([^\"]*)\" button in Navbar$")
+	public void i_hover_over_on_button_in_Navbar(String browseShop) throws Exception {
+		//driver.findElement(By.cssSelector(browseShop));
+		WebElement find  = driver.findElement(By.cssSelector(browseShop));
+		Select select = new Select(find);
+		
+		select.selectByIndex(0);
+		select.selectByIndex(1);
+		
+		select.selectByVisibleText("New");
+	}*/
 
 	@When("^I click on \"([^\"]*)\" button in side NavBar$")
 	public void i_click_on_button_in_side_NavBar(String SideNavBar) throws Exception {
