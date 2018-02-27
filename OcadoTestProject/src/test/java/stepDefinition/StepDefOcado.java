@@ -109,19 +109,6 @@ public class StepDefOcado extends WebConnector{
 		driver.findElement(By.cssSelector(value)).click();
 	}
 	
-/*	// Verify browse shop dropdown
-	@When("^I hover over on \"([^\"]*)\" button in Navbar$")
-	public void i_hover_over_on_button_in_Navbar(String browseShop) throws Exception {
-		//driver.findElement(By.cssSelector(browseShop));
-		WebElement find  = driver.findElement(By.cssSelector(browseShop));
-		Select select = new Select(find);
-		
-		select.selectByIndex(0);
-		select.selectByIndex(1);
-		
-		select.selectByVisibleText("New");
-	}*/
-
 	@When("^I click on \"([^\"]*)\" button in side NavBar$")
 	public void i_click_on_button_in_side_NavBar(String SideNavBar) throws Exception {
 		String value = SideNavBar;
